@@ -57,7 +57,7 @@ else
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox4")).sendKeys(user[3]);
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5")).sendKeys(user[4]);
 
-//. Select the card type randomly. On each run your script should select a random type.
+//13. Select the card type randomly. On each run your script should select a random type.
         int cardType = randNumber(0,3);
 
         //Generate and enter the random card number:
@@ -69,15 +69,12 @@ else
         String masterCard = "5" + (100000000000000L + ((long) (Math.random() * 900000000000000L)));
         String americanExpress = "3" + (10000000000000L + ((long) (Math.random() * 90000000000000L)));
         if (cardType == 0){
-
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_cardList_0")).click();
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6")).sendKeys( Visa + Keys.ENTER);
         }else if(cardType == 1){
-
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_cardList_1")).click();
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6")).sendKeys( masterCard + Keys.ENTER);
         }else if (cardType == 2){
-
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_cardList_2")).click();
             driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6")).sendKeys( americanExpress + Keys.ENTER);
         }
