@@ -87,8 +87,8 @@ else
         //14. Enter a valid expiration date (newer than the current date)
         driver.findElement(By.id("ctl00_MainContent_fmwOrder_InsertButton")).click();
        String month = String.valueOf(randNumber(1,12));
-       if(month.length()==1)
-          month = "0"+month;
+       if(month.length() == 1)
+          month = "0" + month;
        String year = String.valueOf(randNumber(23,27));
         driver.findElement(By.name("ctl00$MainContent$fmwOrder$TextBox1")).sendKeys(month+"/"+year);
         Thread.sleep(2000);
